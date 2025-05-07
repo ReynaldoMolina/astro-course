@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry } from 'astro:content';
+type Props = CollectionEntry<'product'>['data'];
+const { title, name, price } = Astro.props;
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+</head>
+<body>
+  <main class="container mx-auto p-4"></main>
+  <h3>{title}</h3>
+  <div class="flex flex-col">
+    <span>Name: {name}</span>
+    <span>Price: {price}</span>
+  </div>
+  <slot />
+</body>
+</html>

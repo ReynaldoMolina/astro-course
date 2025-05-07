@@ -1,0 +1,183 @@
+---
+import Ableton from "../layouts/Ableton.astro";
+import { Image } from 'astro:assets';
+import logo from "../assets/logo.svg";
+import frontImage from "../assets/front-image.jpg";
+
+const headerLinks = [
+  {
+    name: 'Live',
+    link: '#'
+  },
+  {
+    name: 'Push',
+    link: '#'
+  },
+  {
+    name: 'Move',
+    link: '#'
+  },
+  {
+    name: 'Note',
+    link: '#'
+  },
+  {
+    name: 'Link',
+    link: '#'
+  },
+  {
+    name: 'Shop',
+    link: '#'
+  },
+  {
+    name: 'Packs',
+    link: '#'
+  },
+  {
+    name: 'Help',
+    link: '#'
+  }
+]
+---
+
+<Ableton>
+  <header class="flex flex-col border-b-2 border-b-gray-100 py-4 px-6">
+    <nav class="flex justify-between">
+      <ul class="flex gap-7">
+        <a href="#">
+          <img class="w-19" src={logo.src} alt="logo">
+        </a>
+        {headerLinks.map(element => 
+          (
+            <li class="flex items-center">
+              <a class="font-lg font-semibold" href={element.link}>
+                {element.name}
+              </a>
+            </li>
+          )
+        )}
+        <li class="flex items-center">
+          <a class="text-amber-600 font-lg font-semibold" href="#">More +</a>
+        </li>
+      </ul>
+      <ul class="flex gap-7">
+        <li class="flex items-center">
+          <a class="font-lg font-semibold text-blue-700" href="#">Try Live 12 for free</a>
+        </li>
+        <li class="flex items-center">
+          <a class="text-sm font-semibold" href="#">Log in or register</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="sticky top-0 z-1 bg-white bg-opacity-50">
+    <ul class="flex gap-7 py-5 px-6">
+      <a class="text-sm font-semibold text-amber-600" href="#">
+        About
+      </a>
+      <a class="text-sm font-semibold" href="#">
+        Jobs
+      </a>
+      <a class="text-sm font-semibold" href="#">
+        Apprenticeship
+      </a>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="flex relative justify-center items-center">
+      <Image class="h-120 w-full px-25 m-auto object-cover" src={frontImage} alt="Logo"/>
+      <h1 class="flex text-9xl font-semibold text-red-400 absolute">Ableton</h1>
+    </section>
+  
+    <section class="flex flex-col my-25 gap-7 max-w-3xl m-auto px-10">
+      <h1 class="text-2xl font-semibold">We make <em class="text-blue-800">Live</em>, <em class="text-blue-800">Push</em>, <em class="text-blue-800">Note</em>, <em class="text-blue-800">Move</em> and <em class="text-blue-800">Link</em> — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.</h1>
+      <h2>Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.</h2>
+    </section>
+  
+    <div class="flex h-170 relative items-center max-w-6xl mx-auto">
+      <div class="flex bg-yellow-100 h-170 w-160 absolute right-0 justify-center items-center">
+        <img class="h-60 w-80" src="https://ableton-production.imgix.net/about/photo-2.jpg?dpr=1.2&fit=crop&h=239&ixjsv=1.1.3&w=319" alt="">
+      </div>
+      <img class="absolute h-112 w-112 left-22" src="https://ableton-production.imgix.net/about/photo-1.jpg?dpr=1.2&fit=crop&h=398&ixjsv=1.1.3&w=398" alt="">
+    </div>
+  
+    <section class="flex flex-col my-25 gap-7 max-w-3xl m-auto px-10">
+      <h1 class="text-xl font-semibold">Making music isn’t easy. It takes time, effort, and learning. But when you’re in the flow, it’s incredibly rewarding.</h1>
+      <h2>We feel the same way about making Ableton products. The driving force behind Ableton is our passion for what we make, and the people we make it for.</h2>
+    </section>
+  
+    <div class="flex flex-col my-25 max-w-3xl m-auto px-10 gap-1">
+      <iframe class="w-full h-100" src="https://www.youtube.com/watch?v=9SbnhgjeyXA" frameborder="0"></iframe>
+      <p class="p-2 text-xs font-semibold">Why Ableton - Juanpe Bolivar</p>
+    </div>
+
+    <section class="flex flex-col my-25 gap-7 max-w-3xl m-auto px-10">
+      <h2 class="text-xl font-semibold">We are more than 350 people from 30 different countries divided between our headquarters in Berlin and our offices in Los Angeles and Tokyo.</h2>
+      <h2>Most of us are active musicians, producers, and DJs, and many of us use Live and Push every day. We come from a wide range of cultural and professional backgrounds. Some of us have PhDs, some are self-taught, and most of us are somewhere in between. What connects us is the shared belief that each of us has the skills and knowledge to contribute to something big: helping to shape the future of music culture.</h2>
+    </section>
+  
+    <div class="flex h-190 relative items-center max-w-6xl mx-auto">
+      <div class="flex flex-col gap-20 bg-green-200 h-190 w-160 absolute left-0 justify-center items-center">
+        <img class="h-60 w-80" src="https://ableton-production.imgix.net/about/photo-3.jpg?dpr=1.2&fit=crop&h=239&ixjsv=1.1.3&w=319" alt="">
+        <img class="h-60 w-80" src="https://ableton-production.imgix.net/about/photo-4.jpg?dpr=1.2&fit=crop&h=239&ixjsv=1.1.3&w=319" alt="">
+      </div>
+      <img class="absolute h-112 w-112 right-22" src="https://ableton-production.imgix.net/about/photo-5.jpg?dpr=1.2&fit=crop&h=398&ixjsv=1.1.3&w=398" alt="">
+    </div>
+
+    <section class="flex flex-col my-25 gap-7 max-w-3xl m-auto px-10">
+      <h2 class="text-xl font-semibold">We believe it takes focus to create truly outstanding instruments. We only work on a few products and we strive to make them great.</h2>
+      <h2>Rather than having a one-size-fits-all process, we try to give our people what they need to work their magic and grow. We’ve learned that achieving the best results comes from building teams that are richly diverse, and thus able to explore problems from a wider set of perspectives. We don’t always agree with each other, but opinion and debate are valued and openly encouraged.</h2>
+    </section>
+
+    <div class="flex flex-col my-25 max-w-4xl m-auto">
+      <img class="h-120" src="https://ableton-production.imgix.net/about/poster-meet-the-makers.jpg?auto=format&dpr=1.5&fit=crop&fm=jpg&ixjsv=1.1.3&q=66&w=1067" alt="">
+    </div>
+
+    <section class="flex flex-col my-25 gap-5 max-w-3xl m-auto px-10">
+      <h2 class="text-xl font-semibold">We’re passionate about what we do, but we’re equally passionate about improving who we are.</h2>
+      <h2>We work hard to foster an environment where people can grow both personally and professionally, and we strive to create a wealth of opportunities to learn from and with each other.</h2>
+      <h2>Alongside an internal training program, employees are actively supported in acquiring new knowledge and skills, and coached on applying these in their daily work. In addition, staff-organized development and music salons are a chance to discuss new technologies, production techniques and best practices.</h2>
+    </section>
+
+    <div class="flex flex-col my-25 max-w-3xl m-auto px-10">
+      <img class="bg-fuchsia-300 h-150" src="file:///C:/Users/Dell%20Latitude%205400/Desktop/Learn%20more%20about%20Ableton_files/poster-meet-the-makers.avif" alt="">
+    </div>
+
+    <section class="flex flex-col my-25 gap-5 max-w-3xl m-auto px-10">
+      <h2 class="text-xl font-semibold">We want our employees to love it here. Since we’re looking for exceptional talent from around the world, we will do everything we can to make your transition as easy as possible.</h2>
+      <h2>If you're joining us in Berlin, we'll help with relocation and paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany means you can expect comprehensive health insurance for you and your family, as well as generous maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several company and team outings throughout the year as well as a variety of fun, informal small-group activities.</h2>
+    </section>
+
+    <div class="flex flex-col my-25 max-w-3xl mx-auto px-10 h-100"></div>
+
+    <div class="flex flex-col my-25 gap-5 max-w-4xl m-auto p-20 bg-blue-300">
+      <h2 class="text-xl font-bold"> We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d like to be a part of it, please join us.</h2>
+      <a class="text-blue-700 font-bold text-2xl" href="#">See latest jobs</a>
+    </div>
+
+    <div class="border-b-2 border-b-gray-200"></div>
+  </main>
+
+  <footer class="container flex flex-col my-25 max-w-4xl m-auto bg-amber-200 gap-10">
+    <p class="font-semibold text-6xl">Ableton</p>
+    <div class="flex gap-15">
+      <div class="flex flex-col">
+        <a href="#">Register Live, Push or Move</a>
+        <a href="#">About Ableton</a>
+        <a href="#">Jobs</a>
+        <div>REDES ICONOS</div>
+      </div>
+      <div class="flex flex-col">
+        <p class="font-bold">Education</p>
+        <a href="#">Offers for students and teachers</a>
+        <a href="#">Ableton for the Classroom</a>
+        <a href="#">Ableton for Colleges and Universities</a>
+      </div>
+      <div class="flex flex-col">
+        <p class="font-bold">Sign up to our newsletter</p>
+        <p> Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more. </p>
+      </div>
+    </div>
+  </footer>
+</Ableton>
